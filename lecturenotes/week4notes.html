@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Week 4 Notes</title>
+        <style>
+            td, th {border: 1px solid black;}
+        </style>
+    </head>
+    <body>
+            <h1>Tables and Forms</h1>
+            <h2>Tables</h2>
+
+            <table>
+                <caption>World Population</caption>
+                <tr>
+                    <th>Country</th> <!-- heading don't have to be at the top -->
+                    <th>Population</th>
+                    <th>% of World Population</th>
+                </tr>
+                <tr>
+                    <td>China</td>
+                    <td>1,403,830,640</td>
+                    <td>18%</td>
+                </tr>
+                <tr>
+                    <td>India</td>
+                    <td>1,365,529,124</td>
+                    <td>17.5%</td>
+                </tr>
+            </table>
+
+            <h2>Forms</h2>
+
+            <form action="" method="post">
+                <!-- all the form tags are inline -->
+                <label for="fullname">What's your name:</label><br>
+                <input type="text" id="fullname" name="Full name">
+                <label for="Instructions">Special Instructions:</label>
+                <textarea id="Instructions" name="Instructions" row="3" cols="50"></textarea><br>
+
+                <input type="radio" id="pickup" name="pickdelivery" checked="checked" value="pickup">
+                <label for="pickup">pickup</label>
+                <input type="radio" id="delivery" name="pickdelivery">
+                <label for="delivery">delivery</label><br>
+
+                <input type="checkbox" id="extra" name="extra" value="extra sauce">
+                <label for="extra">extra sauce</label><br>
+
+                <label>Neighborhood:</label>
+                <select id="size" name="size">
+                    <option></option>
+                    <option value="Wescott">Wescott</option>
+                    <option value="Downtown">Downtown</option>
+                    <option value="Eastwood">Eastwood</option>
+                </select>
+
+                <input type="submit" value="send form">
+            </form>
+     </body>
+</html>
