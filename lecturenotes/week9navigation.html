@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        nav{
+            display: flex;
+            background-color: #000000;
+            padding: 10px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        nav div{
+            padding: 5px;
+        }
+        .flexend{
+            justify-content: flex-end;
+        }
+        .spacearound{
+            justify-content: space-around;
+        }
+        .spacebetween{
+            justify-content: space-between;
+        }
+        .navlinks, .social{
+            display: flex;
+        }
+        .split{
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <nav class="flexend">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </nav>
+    <nav class="spacearound">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </nav>
+    <nav class="spacebetween">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </nav>
+    <nav class="split">
+        <div class="navlinks">
+        <div>Home</div>
+        <div>About Us</div>
+        <div>Products</div>
+        <div>Contact</div>
+    </div>
+    <div class="social">
+        <div>Facebook</div>
+        <div>Instagram</div>
+    </div>
+    </nav>
+</body>
+</html>

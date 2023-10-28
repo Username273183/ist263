@@ -6,6 +6,7 @@ a{
     color: #0088cc;
 }
 h1{
+    text-align: center;
     color: #ffffff;
 }
 nav{
@@ -45,4 +46,41 @@ nav a:hover {
 .r2col2{
     color: #000000;
     flex:2;
+}
+
+.row{
+    display: flex;
+    flex: 3;
+    justify-content: space-around;
+    align-items: center;
+}
+aside{
+    display: flex;
+    padding: 30px;
+    background-color: #666666;
+    border-radius: 10px;
+    flex: 1;
+    flex-direction: column;
+    margin: 50px;
+    color: #ffffff;
+}
+.flexbox2{
+    display: flex;
+    padding: 10px;
+}
+.skillspage{
+    background-color: #ffffff;
+    color: #000000;
+}
+.skillspage h1{
+    text-align: center;
+    color: #000000;
+}
+
+.skillspage p{
+    display: flex;
+}
+.skillspage p div{
+    flex: 3;
+    align-items: center;
 }
