@@ -1,0 +1,117 @@
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1em;
+}
+.skip{
+    color: #000000;
+}
+a{
+    color: #0088cc;
+}
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+nav{
+    background-color: #666666;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+nav a {
+    color: #eeeeee;
+}
+nav a:hover {
+    color: #ffffff;
+}
+
+.footer{
+    float:right;
+}
+.row1{
+    display: flex;
+    background-color: #f5f5f7;
+    border-radius: 1em;
+    padding: 20px;
+    margin: 20px;
+}
+.row2{
+    display: flex;
+    background-color: #f5f5f7;
+    border-radius: 1em;
+    padding: 20px;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+.col1{
+    color: #000000;
+    flex:2;
+}
+.col2{
+    color: #000000;
+    flex:1;
+}
+.r2col1{
+    color: #000000;
+    flex:2;
+}
+.r2col2{
+    color: #000000;
+    flex:2;
+}
+
+.row{
+    display: flex;
+    flex: 3;
+    justify-content: space-around;
+    align-items: center;
+}
+aside{
+    display: flex;
+    padding: 30px;
+    background-color: #666666;
+    border-radius: 10px;
+    flex: 1;
+    flex-direction: column;
+    margin: 50px;
+    color: #ffffff;
+}
+.flexbox2{
+    display: flex;
+    padding: 10px;
+}
+.skillspage{
+    background-color: #ffffff;
+    color: #000000;
+}
+.skillspage h1{
+    text-align: center;
+    color: #000000;
+}
+.image{
+    max-width: 100%;
+}
+.skip{
+    background-color: #ffffff;
+    padding: 5px;
+    border: 1px solid #000000;
+    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    left: -999px; 
+}
+
+.skip:focus{
+    left:10px;
+}
+
+@media only screen and (max-width: 768px){
+    nav a{
+        max-width: 100%;
+        display: block;
+        padding: 6px;
+    }
+    nav span{
+        display: none;
+    }
+}

@@ -4,5 +4,6 @@
         "Camara",
         "Intelli",
         "skillspage"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
