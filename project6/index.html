@@ -171,6 +171,9 @@ i {
     height: 24px;
     margin: 0 6px;
 }
+.sr-only{
+    display: none;
+}
 @media only screen and (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -226,11 +229,8 @@ i {
                 </div>
                 <div class="right">
                     <form action="https://formspree.io/f/xbjvzzyq" method="post">
-                        <label for="name"></label>
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        <label for="email"></label>
                         <input type="text" id="email" name="email" placeholder="Your Email" required>
-                        <label for="message"></label>
                         <textarea id="message" name="message" rows="4" placeholder="Your Message" autocomplete="on" spellcheck="true" required></textarea>
                         <button id="submit" type="submit"><i class="fa-solid fa-paper-plane" style="color: #000000;"></i>Submit</button>
                     </form>
@@ -242,8 +242,8 @@ i {
 
         <div class="copyright-icons">
             <div class="social-icons">
-                <a href="https://github.com/Username273183"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
-                <a href="https://www.linkedin.com/in/omar-camara-72001720a/"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i></a>
+                <a href="https://github.com/Username273183"><i class="fa-brands fa-github" style="color: #ffffff;"><span class="sr-only">My GitHub</span></i></a>
+                <a href="https://www.linkedin.com/in/omar-camara-72001720a/"><i class="fa-brands fa-linkedin" style="color: #ffffff;"> <span class="sr-only">My LinkedIn</span></i></a>
             </div>
             <p>&copy; 2023</p>    
         </div>
