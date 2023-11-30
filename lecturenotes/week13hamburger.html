@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- 
+        CSS
+        1. Large = no Hamburger
+        2. Small = show Hamburger
+        3. Large = no X
+        4. Small = show X
+        5. Large = links side by side
+        6. Small = links stacked
+        7. Small = links initially hidden
+
+        JavaScript
+        8. Click on hamburger, show links
+        9. Click on X, hide links
+     -->
+     <style>
+        #hamicon {
+            width: 40px;
+        }
+        #close, #hamicon{
+            width: 40px;
+            cursor: pointer;
+        }
+        .firstrow {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        @media only screen and (min-width: 800px) {
+            #hamicon, #close {
+                display: none;
+            }
+        }
+        @media only screen and (max-width: 799px) {
+            a{
+                display: block;
+                border: 1px solid #ccc;
+                padding: 3px;
+            }
+            #navicons{
+                display: none;
+            }
+        }
+     </style>
+     <script>
+        function showNav(){
+            document.getElementById("navicons").style.display = "block";
+        }
+        function hideNav(){
+            document.getElementById("navicons").style.display = "none";
+        }
+     </script>
+</head>
+<body>
+    <div class="firstrow">
+        <img id="hamicon" onclick="showNav();" src="https://laferger.github.io/ist263/images/hamburger.png" alt="hamburger icon">
+        <i class="fa-solid fa-bars"></i>
+        <p id="close" onclick="hideNav();">X</p>
+    </div>
+    <nav id="navicons">
+        <a href="about.html">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</body>
+</html>
