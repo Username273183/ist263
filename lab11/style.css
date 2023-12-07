@@ -124,3 +124,7 @@ aside{
         display: none;
     }
 }
+
+nav{
+    font-family: 'Roboto', sans-serif;
+}
