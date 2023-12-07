@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"name": "ist263",
+			"path": ".."
+		},
+		{
+			"name": "lab13",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "ist263"
+	}
+}

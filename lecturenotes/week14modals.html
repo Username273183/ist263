@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modals</title>
+    <style>
+        body{
+            font-family: 'Inter', sans-serif;
+        }
+        #container{
+            width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #modal{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            margin-left: -100px;
+            margin-top: 100px;
+            display: none;
+            padding: 5px;
+        }
+        #sub{
+            cursor: pointer;
+            background-color: #7fffd4;
+            padding: 5px;
+            width: 200px;
+            text-align: center;
+        }
+        #ex{
+            text-align: right;
+            margin: 0px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function openModal(){
+            document.getElementById("modal").style.display = "block";
+        }
+        function closeModal(){
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+    <img src="https://laferger.github.io/ist263/images/cupcakes.jpg" alt="banner of cupcakes">
+    <h1>Deserts</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste voluptas enim est quibusdam! Commodi voluptatibus voluptas illum, perspiciatis tempore ex recusandae sunt, dolores, earum nulla quasi? Atque pariatur adipisci aperiam.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste voluptas enim est quibusdam! Commodi voluptatibus voluptas illum, perspiciatis tempore ex recusandae sunt, dolores, earum nulla quasi? Atque pariatur adipisci aperiam.</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste voluptas enim est quibusdam! Commodi voluptatibus voluptas illum, perspiciatis tempore ex recusandae sunt, dolores, earum nulla quasi? Atque pariatur adipisci aperiam.</p>
+    <p id="sub" onclick="openModal();">Subscribe to our mailing list</p>
+    </div>
+    <div id="modal">
+        <p id="ex" onclick="closeModal();">X</p>
+    <form>
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name">
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email">
+        <input type="submit" value="Subscribe">Submit</input>
+    </form>
+    </div>
+</body>
+</html>
