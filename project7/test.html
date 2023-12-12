@@ -1,4 +1,15 @@
-* {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <script src="script.js"></script>
+    <style>
+        * {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
@@ -27,34 +38,25 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    /* flex-wrap: wrap; */
 }
-#name a{
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 600;
-    margin-left: 10%;
-    padding-left: 40px;
+.links{
+  
 }
 main p{
     line-height: 1.5;
 }
-/* #logo{
+#logo{
     text-decoration: none;
     color: #ffffff;
     width: 15%;
+    /* min-width: 15%; */
     margin-top: 10%;
     margin-left: 10%;
     max-width: 100%;
-    padding-left: 40px;
-    font-size: 24px;
-} */
+}
 .ex{
     list-style: square;
-    /* display: block; */
     margin: 10px 20px;
-    /* text-align: center; */
 }
 .ex li{
     margin-top: 10px;
@@ -80,7 +82,6 @@ nav ul li a:hover {
     text-underline-offset: 15px;
 }
 .Education{
-    /* border: #ffffff 1px solid; */
     background-color: #666666;
     margin: 5% 15%;
     padding: 50px;
@@ -150,7 +151,6 @@ form {
 }
 .input {
     background-color: #000000;
-    /* max-width: 190px; */
     height: 40px;
     padding: 10px;
     border: 2px solid white;
@@ -301,9 +301,6 @@ hr {
 .wrapper {
     display: inline-flex;
     list-style: none;
-    /* height: 20px; */
-    /* width: 100%; */
-    /* padding-top: px; */
     font-family: "Poppins", sans-serif;
     justify-content: left;
   }
@@ -377,10 +374,6 @@ hr {
     color: #ffffff;
   }
 
-/* .social-icons i {
-   cursor: pointer;
-} */
-
 i {
     width: 24px;
     height: 24px;
@@ -393,7 +386,6 @@ i {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* margin-bottom: 82310px; */
 }
 .copyright-icons a{
     color:#ffffff;
@@ -405,17 +397,15 @@ i {
     padding-left: 200px;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     nav {
         flex-direction: column;
         align-items: center;
     }
 
-    #name a {
-        /* padding-left: -190px;  */
-        margin-left: -40px;
+    #logo {
+        padding-left: 0; 
         margin-bottom: 10px;
-        margin-top: 15px;
     }
 
     nav ul {
@@ -427,4 +417,93 @@ i {
         text-align: center;
         margin: 10px 0;
     }
-}
+} */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                <a href="index.html">
+                    <img src="/images/logo (1).png" alt="My Logo" id="logo">
+                </a>
+                </div>
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div>
+    <main>
+    <section class="main">
+        <h1>Hello and welcome.</h1>
+        <p id="intro">
+            My name is Omar Camara, and I’m currently pursuing my Bachelor of Science in Computer Science at Syracuse University. My interests include software and web development. Feel free to look around or contact me.
+        </p>
+    </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="section">
+                <div class="contact left">
+                    <div class="left">
+                        <h1>Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>omarcamara000@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone" style="color: #ffffff;"></i>+1(929) 361-0302</p>
+                    </div>
+                    <div class="right">
+                        <form action="https://formspree.io/f/xbjvzzyq" method="post">
+                            <label for="name"><span class="sr-only">Your Name</span></label>
+                            <input placeholder="Name" class="input" name="text" type="text" required>
+                            <label for="email"><span class="sr-only">Your Email</span></label>
+                            <input placeholder="Email" class="input" name="text" type="email" required>
+                            <label for="message"><span class="sr-only">Your Message</span></label>
+                            <textarea id="message" name="message" rows="4" placeholder="Message" autocomplete="on" spellcheck="true" required></textarea>
+                            <button>
+                                <div class="svg-wrapper-1">
+                                  <div class="svg-wrapper">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      viewBox="0 0 24 24"
+                                      width="24"
+                                      height="24"
+                                    >
+                                      <path fill="none" d="M0 0h24v24H0z"></path>
+                                      <path
+                                        fill="currentColor"
+                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                                      ></path>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <span id="send">Send</span>
+                              </button>
+                            </form>
+                    </div>
+                </div>
+            </div>
+    
+            <hr>
+    
+            <div class="copyright-icons">
+                <ul class="wrapper">
+                    <li class="icon linkedin">
+                        <span class="tooltip">LinkedIn</span>
+                        <span><i class="fa-brands fa-linkedin"></i></span>
+                    </li>
+                    <li class="icon github">
+                        <span class="tooltip">GitHub</span>
+                        <span><i class="fa-brands fa-github"></i></span>
+                    </li>
+                </ul>
+                <em>"Design. Develop. Deliver."</em> 
+                <p>&copy; 2023. Icons by <a href="https://icons8.com/">Icons8</a> & <a href="https://fontawesome.com">Font Awesome</a></p>   
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
