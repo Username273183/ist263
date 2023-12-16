@@ -440,6 +440,9 @@ input, textarea{
     flex-direction: column;
     
 }
+.break{
+  list-style: none;
+}
 
 .left p{
     margin-top: 20px;
