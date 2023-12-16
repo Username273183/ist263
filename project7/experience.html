@@ -18,14 +18,14 @@
                         Omar
                     </a>
                 </div>
-                <ul class="links">
+                <div class="links">
                     <a href="#main" class="skip" tabindex="1">Skip to Content</a>
-                    <li><a href="index.html" tabindex="2">Home</a></li>
-                    <li><a href="experience.html" tabindex="3">Experience</a></li>
-                    <li><a href="skills.html" tabindex="4">Skills</a></li>
-                    <i class="fa-solid fa-sun fa-2xl" style="color: #ffffff;" id="icon"></i>
-                </ul>
+                    <a href="index.html" tabindex="2">Home</a>
+                    <a href="experience.html" tabindex="3">Experience</a>
+                    <a href="skills.html" tabindex="4">Skills</a>
+                </div>
             </nav>
+            <i class="fa-solid fa-sun fa-2xl hidden" style="color: #ffffff;" id="icon"></i>
         </div>
     </header>
     <main>
@@ -67,19 +67,19 @@
     </main>
     <footer>
         <div class="footer hidden">
-            <div class="section">
+            <section class="section">
                 <div class="contact left">
                     <div class="left">
-                        <h1>Contact Me</h1>
+                        <h2>Contact Me</h2>
                         <p><i class="fa-solid fa-envelope"></i>omarcamara000@gmail.com</p>
                         <p><i class="fa-solid fa-square-phone"></i>+1(929) 361-0302</p>
                     </div>
                     <div class="right">
                         <form action="https://formspree.io/f/xbjvzzyq" method="post">
                             <label for="name"><span class="sr-only">Your Name</span></label>
-                            <input placeholder="Name" class="input" name="text" type="text" required>
+                            <input placeholder="Name" class="input" name="text" type="text" id="name" required>
                             <label for="email"><span class="sr-only">Your Email</span></label>
-                            <input placeholder="Email" class="input" name="text" type="email" required>
+                            <input placeholder="Email" class="input" name="text" type="email" id="email" required>
                             <label for="message"><span class="sr-only">Your Message</span></label>
                             <textarea id="message" name="message" rows="4" placeholder="Message" autocomplete="on" spellcheck="true" required></textarea>
                             <button class="animated-button">
@@ -95,7 +95,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </section>
     
             <hr>
     
