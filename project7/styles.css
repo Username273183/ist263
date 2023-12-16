@@ -1,38 +1,195 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Open Sans", "Helvetica";
     box-sizing: border-box;
 }
 html{
-    scroll-behavior: smooth;}
+    scroll-behavior: smooth;
+  }
 
+:root{
+    --primary-color: #000000;
+    --secondary-color: #eeeeee;
+    --gradient-color1: #121212;
+    --gradient-color2: #1a1a1a;
+}
+.light-theme{
+    --primary-color: #eeeeee;
+    --secondary-color: #000000;
+    --gradient-color1: #f4f4f4;
+    --gradient-color2: #e0e0e0;
+}
+.fa-envelope,.fa-square-phone{
+    color: var(--secondary-color);
+}
+
+#icon {
+  padding-right: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
 body {
-    background: #000000;
-    color: #ffffff;
+    background: var(--primary-color);
+    color: var(--secondary-color);
 }
-#intro{
-    margin: 0 auto;
-    width: 75%;
-    text-align: left;
-    font-size: 18px;
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
 }
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.part {
+    width: 100%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    background: var(--primary-color);
+    background: linear-gradient(
+      135deg,
+      var(--gradient-color1) 25%,
+      var(--gradient-color2) 25%,
+      var(--gradient-color2) 50%,
+      var(--gradient-color1) 50%,
+      var(--gradient-color1) 75%,
+      var(--gradient-color2) 75%,
+      var(--gradient-color2)
+    );
+    background-size: 40px 40px;
+  
+    animation: move 4s linear infinite;
+
+    position: relative;
+    overflow: hidden;
+  }
+  .part::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: url(/images/pp.png) center/cover no-repeat; Replace with your image path */
+    transform: translateZ(-10px) scale(2); /* Adjust the scale for the parallax effect */
+    z-index: -1;
+}
+
+  @keyframes move {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 40px 40px;
+    }
+  }
+
+  .card {
+    /* z-index: 10; */
+    position: relative;
+    width: 226px;
+    height: 226px;
+    /* background-image: url(/images/pp.png); */
+    background: url(/images/pp.png);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card svg {
+    width: 48px;
+    fill: #333;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover {
+    transform: rotate(-5deg) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: var(--secondary-color);
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .card:hover .card__content {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 1.5em;
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  .card__description {
+    margin: 10px 0 0;
+    font-size: .85em;
+    color: var(--primary-color);
+    line-height: 1.4;
+  }
+  
+  .card:hover svg {
+    scale: 0;
+    transform: rotate(-45deg);
+  }
+  
 .container {
     max-width: 100%;
     margin: 0 auto;
     flex-wrap: wrap;
+    height: 100%;
 }
+.skip{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 5px;
+  border: 1px solid var(--secondary-color);
+  text-decoration: none;
+  position: absolute;/* Positions an element relative to the top left corner if the viewport */
+  top: 10px;
+  left: -999px; /* Push off the left side */
+}
+
+.skip:focus{
+  left:10px;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
-    /* flex-wrap: wrap; */
 }
 #name a{
     text-decoration: none;
-    color: #ffffff;
-    font-size: 24px;
+    color: var(--secondary-color);
+    font-size: 1.75em;
     font-weight: 600;
     margin-left: 10%;
     padding-left: 40px;
@@ -40,16 +197,6 @@ nav {
 main p{
     line-height: 1.5;
 }
-/* #logo{
-    text-decoration: none;
-    color: #ffffff;
-    width: 15%;
-    margin-top: 10%;
-    margin-left: 10%;
-    max-width: 100%;
-    padding-left: 40px;
-    font-size: 24px;
-} */
 .ex{
     list-style: square;
     /* display: block; */
@@ -67,10 +214,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: var(--secondary-color);
     text-decoration: none;
-    text-decoration-color: #000000;
-    font-size: 18px;
+    text-decoration-color: var(--primary-color);
+    font-size: 1.2em;
 }
 
 nav ul li a:hover {
@@ -112,8 +259,11 @@ section {
     margin-top: 35px;
 }
 main h1{
-    font-size: 60px;
-    margin-bottom: 20px;
+  margin-top: 60px;
+    font-size: 3.5em;
+    margin-bottom: 60px;
+    text-align: center;
+    
 }
 .skillslist{
     display: flex;
@@ -137,8 +287,8 @@ main h1{
 footer {
     padding: 20px;
     text-align: center;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 form {
@@ -149,33 +299,33 @@ form {
     text-align: left;
 }
 .input {
-    background-color: #000000;
+    background-color: var(--primary-color);
     /* max-width: 190px; */
     height: 40px;
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid var(--secondary-color);
     border-radius: 10px;
   }
   
   .input:focus {
-    color: #ffffff;
-    background-color: #000000;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
     outline-color: #676767;
     box-shadow: -3px -3px 15px #676767;
     transition: .1s;
     transition-property: box-shadow;
   }
 #message{
-    background-color: #000000;
+    background-color: var(--primary-color);
     height: 100px;
     padding: 10px;
-    border: 2px solid white;
+    border: 2px solid var(--secondary-color);
     border-radius: 10px;
 }
 
   #message:focus{
-    color: #ffffff;
-    background-color: #000000;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
     outline-color: #676767;
     box-shadow: -3px -3px 15px #676767;
     transition: .1s;
@@ -184,57 +334,92 @@ form {
 input, textarea{
     border-radius: 10px;
 }
-button {
-    font-family: inherit;
-    font-size: 20px;
-    color: #000000;
-    padding: 0.7em 1em;
-    padding-left: 0.9em;
+.animated-button {
+    position: relative;
     display: flex;
     align-items: center;
-    border: none;
-    border-radius: 16px;
-    overflow: hidden;
-    transition: all 0.2s;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 1em;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    box-shadow: 0 0 0 2px var(--secondary-color);
     cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   }
   
-  button span {
-    display: block;
-    margin-left: 0.3em;
-    transition: all 0.3s ease-in-out;
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: var(--secondary-color);
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   }
   
-  button svg {
-    display: block;
-    transform-origin: center center;
-    transition: transform 0.3s ease-in-out;
+  .animated-button .arr-1 {
+    right: 16px;
   }
   
-  button:hover .svg-wrapper {
-    animation: fly-1 0.6s ease-in-out infinite alternate;
+  .animated-button .arr-2 {
+    left: -25%;
   }
   
-  button:hover svg {
-    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   }
   
-  button:hover span {
-    transform: translateX(5em);
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   }
   
-  button:active {
-    transform: scale(0.95);
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: var(--primary-color);
+    border-radius: 12px;
   }
-
-  @keyframes fly-1 {
-    from {
-      transform: translateY(0.1em);
-    }
   
-    to {
-      transform: translateY(-0.1em);
-    }
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: var(--primary-color);
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px var(--secondary-color);
+  }
+  
+  .animated-button:hover .circle {
+    width: 2200px;
+    height: 220px;
+    opacity: 1;
   }
 .footer h1, .footer p{
     margin: 10px;
@@ -244,8 +429,10 @@ button {
     padding-bottom: 40px;
 }
 .footer {
+    /* transform: translateZ(-10px) ; */
     display: flex;
     flex-direction: column;
+    
 }
 
 .left p{
@@ -274,14 +461,14 @@ button {
 form input, form textarea{
     width: 100%;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1em;
     border: 1px solid #eeeeee;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 
 }
 .contact h1 {
-    font-size: 40px;
+    font-size: 2.5em;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -301,21 +488,18 @@ hr {
 .wrapper {
     display: inline-flex;
     list-style: none;
-    /* height: 20px; */
-    /* width: 100%; */
-    /* padding-top: px; */
     font-family: "Poppins", sans-serif;
     justify-content: left;
   }
   
   .wrapper .icon {
     position: relative;
-    background: #fff;
+    background: var(--secondary-color);
     border-radius: 50%;
     margin: 10px;
     width: 32px;
     height: 32px;
-    font-size: 18px;
+    font-size: 1.4em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,9 +512,9 @@ hr {
   .wrapper .tooltip {
     position: absolute;
     top: 0;
-    font-size: 14px;
-    background: #fff;
-    color: #fff;
+    font-size: .65em;
+    background: var(--secondary-color);
+    color: var(--secondary-color);
     padding: 5px 8px;
     border-radius: 5px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -344,7 +528,7 @@ hr {
     content: "";
     height: 8px;
     width: 8px;
-    background: #fff;
+    background: var(--secondary-color);
     bottom: -3px;
     left: 50%;
     transform: translate(-50%) rotate(45deg);
@@ -367,20 +551,15 @@ hr {
   .wrapper .linkedin:hover .tooltip,
   .wrapper .linkedin:hover .tooltip::before {
     background: #0a66c2;
-    color: #ffffff;
+    color: var(--secondary-color);
   }
   
   .wrapper .github:hover,
   .wrapper .github:hover .tooltip,
   .wrapper .github:hover .tooltip::before {
-    background: #000000;
-    color: #ffffff;
+    background: var(--primary-color);
+    color: var(--secondary-color);
   }
-
-/* .social-icons i {
-   cursor: pointer;
-} */
-
 i {
     width: 24px;
     height: 24px;
@@ -393,10 +572,9 @@ i {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* margin-bottom: 82310px; */
 }
 .copyright-icons a{
-    color:#ffffff;
+    color:var(--secondary-color);
 }
 .copyright-icons a:visited{
     color:#979797;
@@ -404,7 +582,6 @@ i {
 .copyright-icons em{
     padding-left: 200px;
 }
-
 @media only screen and (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -412,7 +589,6 @@ i {
     }
 
     #name a {
-        /* padding-left: -190px;  */
         margin-left: -40px;
         margin-bottom: 10px;
         margin-top: 15px;
@@ -427,4 +603,6 @@ i {
         text-align: center;
         margin: 10px 0;
     }
+
+
 }

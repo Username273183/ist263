@@ -7,108 +7,88 @@
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <!-- <div class="logo">
-                <a href="index.html">
-                    <img src="/images/logo (1).png" alt="My Logo" id="logo">
-                </a>
-                </div> -->
-                <div id="name">
-                    <a href="index.html">
-                        Omar
-                    </a>
-                </div>
-                <ul class="links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="experience.html">Experience</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                </ul>
-            </nav>
+        <header>
+            <div class="container hidden">
+                <nav>
+                    <div id="name">
+                        <a href="index.html">
+                            Omar
+                        </a>
+                    </div>
+                    <ul class="links">
+                        <a href="#main" class="skip" tabindex="1">Skip to Content</a>
+                        <li><a href="index.html" tabindex="2">Home</a></li>
+                        <li><a href="experience.html" tabindex="3">Experience</a></li>
+                        <li><a href="skills.html" tabindex="4">Skills</a></li>
+                        <i class="fa-solid fa-sun fa-2xl" style="color: #ffffff;" id="icon"></i>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+        <div class="hidden" id="main">
+            <h1>Hello and welcome.</h1>
         </div>
-    </header>
-    <div>
-    <main>
-    <section class="main">
-        <h1>Hello and welcome.</h1>
-        <p id="intro">
-            My name is Omar Camara, and I’m currently pursuing my Bachelor of Science in Computer Science at Syracuse University. My interests include software and web development. Feel free to look around or contact me.
-        </p>
+    
+    <section class="part hidden">
+        <div class="card hidden">
+            <div class="card__content">
+              <p class="card__title">I'm Omar
+              </p><p class="card__description">My name is Omar Camara, and I’m currently pursuing my Bachelor of Science in Computer Science at Syracuse University. My interests include software and web development. Feel free to look around or contact me.</p>
+            </div>
+          </div>
     </section>
-    </main>
-    <!-- <div id="loader-container">
-        <div id="loader">
-            <svg viewBox="0 0 240 240" height="240" width="240" class="pl">
-                <circle stroke-linecap="round" stroke-dashoffset="-330" stroke-dasharray="0 660" stroke-width="20" stroke="#000" fill="none" r="105" cy="120" cx="120" class="pl__ring pl__ring--a"></circle>
-                <circle stroke-linecap="round" stroke-dashoffset="-110" stroke-dasharray="0 220" stroke-width="20" stroke="#000" fill="none" r="35" cy="120" cx="120" class="pl__ring pl__ring--b"></circle>
-                <circle stroke-linecap="round" stroke-dasharray="0 440" stroke-width="20" stroke="#000" fill="none" r="70" cy="120" cx="85" class="pl__ring pl__ring--c"></circle>
-                <circle stroke-linecap="round" stroke-dasharray="0 440" stroke-width="20" stroke="#000" fill="none" r="70" cy="120" cx="155" class="pl__ring pl__ring--d"></circle>
-            </svg>
-        </div>
-    </div> -->
+</main>
     <footer>
-        <div class="footer">
-            <div class="section">
+        <div class="footer hidden">
+            <section class="section">
                 <div class="contact left">
                     <div class="left">
                         <h1>Contact Me</h1>
-                        <p><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>omarcamara000@gmail.com</p>
-                        <p><i class="fa-solid fa-square-phone" style="color: #ffffff;"></i>+1(929) 361-0302</p>
+                        <p><i class="fa-solid fa-envelope"></i>omarcamara000@gmail.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>+1(929) 361-0302</p>
                     </div>
                     <div class="right">
                         <form action="https://formspree.io/f/xbjvzzyq" method="post">
                             <label for="name"><span class="sr-only">Your Name</span></label>
                             <input placeholder="Name" class="input" name="text" type="text" required>
-                            <!-- <input type="text" id="name" name="name" placeholder="Your Name" required> -->
                             <label for="email"><span class="sr-only">Your Email</span></label>
                             <input placeholder="Email" class="input" name="text" type="email" required>
-                            <!-- <input type="text" id="email" name="email" placeholder="Your Email" required> -->
                             <label for="message"><span class="sr-only">Your Message</span></label>
                             <textarea id="message" name="message" rows="4" placeholder="Message" autocomplete="on" spellcheck="true" required></textarea>
-                            <button>
-                                <div class="svg-wrapper-1">
-                                  <div class="svg-wrapper">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      viewBox="0 0 24 24"
-                                      width="24"
-                                      height="24"
-                                    >
-                                      <path fill="none" d="M0 0h24v24H0z"></path>
-                                      <path
-                                        fill="currentColor"
-                                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
-                                      ></path>
-                                    </svg>
-                                  </div>
-                                </div>
-                                <span id="send">Send</span>
+                            <button class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                  ></path>
+                                </svg>
+                                <span class="text">Submit</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+                                  ></path>
+                                </svg>
                               </button>
-                            <!-- <button id="submit" type="submit"><i class="fa-solid fa-paper-plane" style="color: #000000;"></i>Submit</button> -->
                         </form>
                     </div>
                 </div>
-            </div>
+            </section>
     
             <hr>
     
             <div class="copyright-icons">
-                <!-- <div class="social-icons">
-                    <a href="https://github.com/Username273183"><i class="fa-brands fa-github" style="color: #ffffff;"><span class="sr-only">My GitHub</span></i></a>
-                    <a href="https://www.linkedin.com/in/omar-camara-72001720a/"><i class="fa-brands fa-linkedin" style="color: #ffffff;"> <span class="sr-only">My LinkedIn</span></i></a>
-                </div> -->
                 <ul class="wrapper">
                     <li class="icon linkedin">
                         <span class="tooltip">LinkedIn</span>
-                        <span><i class="fa-brands fa-linkedin"></i></span>
+                        <a href="https://www.linkedin.com/in/omar-camara-72001720a/"><span><i class="fa-brands fa-linkedin"></i></span></a>
                     </li>
                     <li class="icon github">
                         <span class="tooltip">GitHub</span>
-                        <span><i class="fa-brands fa-github"></i></span>
+                        <a href="https://github.com/Username273183"><span><i class="fa-brands fa-github"></i></span></a>
                     </li>
                 </ul>
                 <em>"Design. Develop. Deliver."</em> 
